@@ -11,18 +11,18 @@ int main()
     printf("enter the elements of the array\n");
     for (int i = 0; i < n; i++)
     {
-        scanf("%d",&arr[n]);
+        scanf("%d",&arr[i]);
     }
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] < largest)
+        if (arr[i] > largest)
         {
             second_largest = largest;
             largest = arr[i];
         }
         else
         {
-            if (arr[i] > second_largest && arr[i] < largest)
+            if (arr[i] > second_largest && largest!=arr[i])
             {
                 second_largest = arr[i];
             }
